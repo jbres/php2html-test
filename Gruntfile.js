@@ -13,19 +13,7 @@ module.exports = function(grunt) {
     php2html: {
       default: {
         options: {
-		  //in previous versions, setting this to an empty object would prevent htmlhint.  that doesn't seem to work anymore
-		  //htmlhint: {}
-          //setting all the default htmlhint props (as described in https://www.npmjs.org/package/grunt-php2html) to false to try to prevent it from erring.  
-          htmlhint: {
-			'tagname-lowercase': false,
-			'attr-lowercase': false,
-			'attr-value-double-quotes': false,
-			'doctype-first': false,
-			'tag-pair': false,
-			'spec-char-escape': false,
-			'id-unique': false,
-			'src-not-empty': false
-		  }
+          htmlhint:false
         },
         files: [
           //process all php file under the source dir, generating html in the build dir
